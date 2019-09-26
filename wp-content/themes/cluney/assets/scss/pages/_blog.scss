@@ -1,0 +1,219 @@
+// blog.scss
+// -----------------------------------------------------------------
+
+.page-blog,
+.archive.category,
+.archive.date {
+  .page-title {
+    a {
+      text-decoration: none;
+    }
+    small {
+      font-family: $font-family-serif;
+      font-size: 24px;
+      font-style: italic;
+      font-weight: 400;
+      letter-spacing: .5px;
+      text-transform: none;
+      color: $text-color;
+      border-left: 1px solid $border-color;
+      padding-left: 18px;
+
+    }
+  }
+  .archive-title {
+    font-size: 16px;
+    background: #000;
+    color: #fff;
+    padding: 15px 30px;
+    margin: 0 0 30px;
+  }
+  .type-post {
+    background-image: url('assets/img/dotted-line.svg');
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    padding: 0 0 50px;
+    margin: 0 0 50px;
+    .post-title {
+      font-size: 18px;
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: 2px;
+      margin: 0 0 5px;
+      a {
+        text-decoration: none;
+        line-height: 1.35;
+      }
+    }
+    .date {
+      font-family: $font-family-sans-serif;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin: 0 0 30px;
+      display: block;
+    }
+    .btn-excerpt-wrapper {
+      text-align: center;
+      margin-top: 50px;
+    }
+    .btn-excerpt {
+      padding-left: 100px;
+      padding-right: 100px;
+      margin: 0 auto;
+    }
+  }
+  .blog-pagination {
+
+  }
+}
+
+.tag-old {
+  p {
+    text-align: center;
+    .alignleft,
+    .alignright {
+      float: none;
+    }
+    img {
+      width: 80%;
+      height: auto;
+    }
+    .alignleft {
+      float: none;
+      margin: 10px auto;
+      width: 39.5%;
+      margin-right: .5%;
+    }
+    .alignright {
+      float: none;
+      margin: 10px auto;
+      width: 39.5%;
+      margin-left: .5%;
+    }
+  }
+}
+
+
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {}
+
+// Up to tablet
+@media (max-width: 767px) {
+
+  .page-blog,
+  .archive.category,
+  .archive.date {
+    .page-title {
+      small {
+        font-size: 24px;
+        padding-left: 18px;
+      }
+    }
+    .archive-title {
+      font-size: 16px;
+      padding: 15px;
+      margin: 0 -15px 30px;
+    }
+    .type-post {
+      padding: 0 0 40px;
+      margin: 0 0 40px;
+      .post-title {
+        font-size: 18px;
+        letter-spacing: 2px;
+      }
+      .date {
+        margin: 0 0 15px;
+      }
+      .btn-excerpt-wrapper {
+        margin-top: 40px;
+      }
+      .btn-excerpt {
+        padding-left: 100px;
+        padding-right: 100px;
+      }
+    }
+    .blog-pagination {
+
+    }
+  }
+
+  .tag-old {
+    p {
+      img {
+        width: 100%;
+      }
+      .alignleft {
+        width: 49%;
+        margin-right: .5%;
+      }
+      .alignright {
+        width: 49%;
+        margin-left: .5%;
+      }
+    }
+  }
+
+}
+
+// Up to landscape phone
+@media (max-width: 480px) {
+
+  .page-blog,
+  .archive.category,
+  .archive.date {
+    .page-title {
+      small {
+        font-size: 21px;
+        padding-left: 12px;
+      }
+    }
+    .type-post {
+      padding: 0 0 30px;
+      margin: 0 0 30px;
+      .post-title {
+        font-size: 16px;
+        letter-spacing: 1.5px;
+      }
+      .date {
+        font-size: 12px;
+        letter-spacing: 1px;
+        margin: 0 0 15px;
+      }
+      .btn-excerpt-wrapper {
+        margin-top: 30px;
+      }
+      .btn-excerpt {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+    .blog-pagination {
+
+    }
+  }
+
+  .tag-old {
+    p {
+      .alignleft {
+        width: 100%;
+        margin-right: 0;
+      }
+      .alignright {
+        width: 100%;
+        margin-left: 0;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,163 @@
+.post-type-archive-portfolio,
+.tax-portfolio-gallery {
+  .portfolio-categories {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: right;
+    li {
+      display: inline-block;
+      margin: 0 5px 0 0;
+      a {
+        border: 1px solid $border-color;
+        display: block;
+        text-decoration: none;
+        font-family: $font-family-sans-serif;
+        font-size: 11px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding: 9px 15px;
+      }
+      &.current-cat a {
+        background: #000;
+        color: #fff;
+        border-color: #000;
+      }
+    }
+  }
+  .archive-description {
+    margin: 0 0 50px;
+    p {
+      margin: 0;
+    }
+  }
+  .gallery-posts {
+    margin: 0 0 -30px;
+    .portfolio {
+      margin: 0 0 30px;
+      background: $grey-bg;
+      position: relative;
+      a {
+        display: block;
+      }
+      .gallery-title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        text-align: center;
+        margin: 0;
+        background: rgba(0,0,0,.3);
+        color: #fff;
+        font-size: 14px;
+        line-height: 1.5;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 150ms;
+        @extend .vertical-center-parent;
+        span {
+          @extend .vertical-center;
+        }
+      }
+    }
+  }
+}
+
+.no-touch {
+  .gallery-posts {
+    .portfolio:hover {
+      .gallery-title {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .post-type-archive-portfolio,
+  .tax-portfolio-gallery {
+    .portfolio-categories {
+      float: none;
+      text-align: left;
+      margin: 0 0 30px;
+    }
+  }
+
+}
+
+// Up to tablet
+@media (max-width: 767px) {
+
+  .post-type-archive-portfolio,
+  .tax-portfolio-gallery {
+    .portfolio-categories {
+      float: none;
+      text-align: left;
+      margin: 0 0 20px;
+      li {
+        margin: 0 5px 10px 0;
+        a {
+
+        }
+      }
+    }
+    .archive-description {
+      margin: 0 0 40px;
+    }
+    .gallery-posts {
+      margin: 0;
+      .portfolio {
+        a {
+
+        }
+        .gallery-title {
+          opacity: 1;
+          background: rgba(0,0,0,.1);
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+}
+
+// Up to landscape phone
+@media (max-width: 480px) {
+
+  .post-type-archive-portfolio,
+  .tax-portfolio-gallery {
+    .portfolio-categories {
+      float: none;
+      text-align: left;
+      margin: 0 0 20px;
+      li {
+        margin: 0 5px 10px 0;
+        a {
+
+        }
+      }
+    }
+    .archive-description {
+      margin: 0 0 30px;
+    }
+  }
+
+}

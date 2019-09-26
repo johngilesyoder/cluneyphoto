@@ -1,0 +1,16 @@
+
+/* TYPOGRAPHY */
+/* ----------------------------------------- */
+.alert { background:red; color:white } /* 'alert' has a basic style, since it's useful to have it standing out for testing purposes.*/
+
+
+/*************  GLOBAL  *****************/
+body {
+	font-family: 'Garamond', serif;
+	font-size: 16px;
+	line-height: 21px;
+	color: #4c4c4c;
+	-webkit-font-smoothing: antialiased;
+}
+
+.allcaps { text-transform: uppercase;  }

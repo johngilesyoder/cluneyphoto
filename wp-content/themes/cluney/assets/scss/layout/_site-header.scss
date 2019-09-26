@@ -1,0 +1,297 @@
+// site-header.scss
+// -----------------------------------------------------------------
+
+.site-header {
+  .navbar-header {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    .navbar-toggle {
+      .icon-bar {
+        width: 32px;
+        & + .icon-bar {
+          margin-top: 5px;
+        }
+      }
+    }
+    .navbar-brand {
+      padding: 33px 0;
+      margin: 0;
+      float: none;
+      display: inline-block;
+      img {
+        height: 94px;
+      }
+    }
+    .primary-nav-left,
+    .primary-nav-right {
+      width: 485px;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      flex-flow: row wrap;
+      text-align: center;
+      justify-content: space-around;
+      li {
+        display: inline-block;
+        height: 160px;
+        line-height: 160px;
+        a {
+          font-family: $font-family-sans-serif;
+          font-size: 13px;
+          text-transform: uppercase;
+          font-weight: 500;
+          letter-spacing: 2.5px;
+          text-decoration: none;
+          border-bottom: 2px solid transparent;
+          padding-bottom: 5px;
+          &:hover {
+            border-bottom-color: $text-color;
+          }
+        }
+        &.current-menu-item {
+          a {
+            border-bottom-color: $text-color;
+          }
+        }
+      }
+    }
+
+  }
+  .navbar-nav {
+    & > li {
+      & > a {
+
+      }
+    }
+    .dropdown-toggle {
+      .caret {
+        border: 0;
+        background-image: url('assets/img/icon-chevron-down-blue.svg');
+        background-size: cover;
+        width: 10px;
+        height: 7px;
+      }
+    }
+    .dropdown-menu {
+
+    }
+  }
+}
+
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {
+
+  .site-header {
+    .navbar-collapse {
+      display: none !important;
+    }
+  }
+
+}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .site-header {
+    min-height: 100px;
+    .navbar-collapse {
+      display: none !important;
+    }
+    .navbar-header {
+      .navbar-brand {
+        padding: 23px 50px;
+        height: 100px;
+        img {
+          height: 54px;
+        }
+      }
+      .primary-nav-left,
+      .primary-nav-right {
+        width: 350px;
+        justify-content: space-between;
+        li {
+          height: 100px;
+          line-height: 100px;
+        }
+      }
+    }
+
+  }
+
+}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .site-header {
+    min-height: 100px;
+    .navbar-header {
+      text-align: left;
+      width: auto;
+      display: block;
+      .navbar-toggle {
+        margin: 33px 15px 33px 0;
+      }
+      .navbar-brand {
+        padding: 23px 15px;
+        height: 100px;
+        float: left;
+        img {
+          height: 54px;
+        }
+      }
+      .primary-nav-left,
+      .primary-nav-right {
+        display: none;
+      }
+    }
+    .navbar-collapse {
+      .navbar-nav {
+        margin: 12.5px -15px;
+      }
+      & > ul {
+        & > li {
+          & > a {
+            font-family: $font-family-sans-serif;
+            font-size: 13px;
+            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: 2.5px;
+            text-decoration: none;
+            span {
+              border-bottom: 2px solid transparent;
+              padding-bottom: 5px;
+            }
+          }
+          &.current-menu-item {
+            a {
+              span {
+                border-bottom-color: $text-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+// Up to tablet
+@media (max-width: 767px) {
+
+  .site-header {
+    min-height: 80px;
+    .navbar-header {
+      text-align: left;
+      width: auto;
+      display: block;
+      .navbar-toggle {
+        margin: 23px 15px 23px 0;
+      }
+      .navbar-brand {
+        padding: 13px 15px;
+        height: 80px;
+        float: left;
+        img {
+          height: 54px;
+        }
+      }
+      .primary-nav-left,
+      .primary-nav-right {
+        display: none;
+      }
+    }
+    .navbar-collapse {
+      .navbar-nav {
+        margin: 12.5px -15px;
+      }
+      & > ul {
+        & > li {
+          & > a {
+            font-family: $font-family-sans-serif;
+            font-size: 13px;
+            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: 2.5px;
+            text-decoration: none;
+            span {
+              border-bottom: 2px solid transparent;
+              padding-bottom: 5px;
+            }
+          }
+          &.current-menu-item {
+            a {
+              span {
+                border-bottom-color: $text-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+// Up to landscape phone
+@media (max-width: 480px) {
+
+  .site-header {
+    min-height: 60px;
+    .navbar-header {
+      text-align: left;
+      width: auto;
+      display: block;
+      .navbar-toggle {
+        margin: 13px 15px 13px 0;
+      }
+      .navbar-brand {
+        padding: 8px 15px;
+        height: 60px;
+        float: left;
+        img {
+          height: 44px;
+        }
+      }
+      .primary-nav-left,
+      .primary-nav-right {
+        display: none;
+      }
+    }
+    .navbar-collapse {
+      & > ul {
+        & > li {
+          & > a {
+            font-family: $font-family-sans-serif;
+            font-size: 13px;
+            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: 2.5px;
+            text-decoration: none;
+            span {
+              border-bottom: 2px solid transparent;
+              padding-bottom: 5px;
+            }
+          }
+          &.current-menu-item {
+            a {
+              span {
+                border-bottom-color: $text-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

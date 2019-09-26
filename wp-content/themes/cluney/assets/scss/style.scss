@@ -1,0 +1,53 @@
+/*
+Theme Name: Cluney Photo
+Description: Theme for Cluney Photo
+Version: 2.0.0
+Author: @johngilesyoder
+Author URI: http://www.twitter.com/johngilesyoder;
+Tags:
+*/
+
+* { -webkit-font-smoothing: antialiased; }
+
+
+@import "utilities/variables";
+@import "utilities/colors";
+
+// Bootstrap
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+
+// Utilities
+@import "utilities/buttons";
+@import "utilities/mixins";
+@import "utilities/wordpress-core";
+@import "utilities/z-index";
+
+// Components
+@import "components/blog-sidebar";
+@import "components/cms-content";
+@import "components/footer-blocks";
+@import "components/forms";
+@import "components/hr";
+@import "components/masonry-gallery";
+@import "components/social-rows";
+
+// Layout
+@import "layout/archive";
+@import "layout/page";
+@import "layout/post";
+@import "layout/site-header";
+@import "layout/site-footer";
+
+// Pages
+@import "pages/404";
+@import "pages/about";
+@import "pages/blog";
+@import "pages/contact";
+@import "pages/home";
+@import "pages/investment";
+@import "pages/portfolio";
+@import "pages/single";
+@import "pages/single-portfolio-gallery";
+@import "pages/testimonials";
+
+// Vendor

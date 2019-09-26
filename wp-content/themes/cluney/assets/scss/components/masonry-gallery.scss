@@ -1,0 +1,54 @@
+.grid {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.grid-item {
+  float: left;
+  width: 100%;
+  height: auto;
+  //background: #0D8;
+}
+
+.diptych { width: 49%; }
+
+.gutter-sizer {
+  width: 2%;
+}
+
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {}
+
+// Up to tablet
+@media (max-width: 767px) {
+
+  .diptych {
+    width: 100%;
+  }
+  .gutter-sizer {
+    width: 30px;
+  }
+
+}
+
+// Up to landscape phone
+@media (max-width: 480px) {
+
+  .gutter-sizer {
+    width: 15px;
+  }
+
+}

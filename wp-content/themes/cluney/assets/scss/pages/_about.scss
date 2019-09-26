@@ -1,0 +1,45 @@
+// about.scss
+// -----------------------------------------------------------------
+
+.page-template-template-about {
+  .about-photo {
+    margin: 0 0 40px;
+  }
+}
+
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .page-template-template-about {
+
+  }
+
+}
+
+// Up to tablet
+@media (max-width: 767px) {
+
+  .page-template-template-about {
+
+  }
+
+}
+
+// Up to landscape phone
+@media (max-width: 480px) {
+
+  .page-template-template-about {
+
+  }
+
+}

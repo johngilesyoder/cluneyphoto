@@ -1,0 +1,105 @@
+// home.scss
+// -----------------------------------------------------------------
+
+.page-template-template-home {
+  .site-header {
+    margin: 0;
+  }
+  .home-hero {
+    margin: 0 0 100px;
+    .soliloquy-caption {
+      display: none;
+    }
+  }
+  .home-statement {
+    text-align: center;
+    margin: 0;
+    h1 {
+      margin: 0;
+      font-size: $font-size-base;
+      font-weight: 400;
+      font-family: $font-family-base;
+    }
+    p {
+      margin: 0;
+    }
+    .emphasis {
+      font-family: $font-family-sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      letter-spacing: 1.5px;
+    }
+    .home-statement-cta {
+      font-size: 14px;
+      margin: 30px 0 0;
+      a {
+        font-weight: 700;
+      }
+      &:before {
+        content: '';
+        display: block;
+        width: 25%;
+        height: 2px;
+        margin: 0 auto 30px;
+        background-image: url('assets/img/dotted-line.svg');
+      }
+    }
+  }
+}
+
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .page-template-template-home {
+    .home-hero {
+      margin: 0 0 80px;
+    }
+  }
+
+}
+
+// Up to tablet
+@media (max-width: 767px) {
+
+  .page-template-template-home {
+    .home-hero {
+      margin: 0 0 40px;
+    }
+  }
+
+}
+
+// Up to landscape phone
+@media (max-width: 480px) {
+
+  .page-template-template-home {
+    .home-hero {
+      margin: 0 0 30px;
+    }
+    .home-statement {
+      p {
+        font-size: 16px;
+      }
+      .home-statement-cta {
+        margin: 15px 0 0;
+        p {
+          font-size: 14px;
+        }
+        &:before {
+          margin: 0 auto 15px;
+        }
+      }
+    }
+  }
+
+}

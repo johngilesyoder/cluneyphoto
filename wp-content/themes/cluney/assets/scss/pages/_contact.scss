@@ -1,0 +1,72 @@
+// contact.scss
+// -----------------------------------------------------------------
+
+.page-template-template-contact {
+  .contact-info {
+    background: $grey-bg;
+    padding: 30px;
+    font-size: 16px;
+    margin: 0 0 40px;
+    h4 {
+      font-size: 18px;
+      letter-spacing: 3px;
+      margin: 0 0 30px;
+    }
+    .contact-name {
+      margin: 0 0 15px;
+      display: block;
+    }
+    address {
+      margin: 0 0 15px;
+    }
+    .phone-number,
+    .email-address {
+      display: block;
+    }
+    .email-address {
+      margin: 0 0 15px;
+    }
+  }
+}
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {}
+
+// Up to tablet
+@media (max-width: 767px) {
+
+  .page-template-template-contact {
+    .contact-info {
+      padding: 15px;
+      h4 {
+        margin: 0 0 15px;
+      }
+      .contact-name,
+      address,
+      .email-address {
+        margin: 0 0 10px;
+      }
+    }
+  }
+
+}
+
+// Up to landscape phone
+@media (max-width: 480px) {
+
+  .page-template-template-contact {
+    .contact-info {
+      margin: 0 0 30px;
+    }
+  }
+
+}

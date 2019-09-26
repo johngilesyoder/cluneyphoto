@@ -1,0 +1,96 @@
+.social-rows {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  li {
+    margin: 0 0 5px;
+    .social-row-wrapper {
+      background: $grey-bg;
+      display: block;
+      padding: 30px 20px;
+      text-decoration: none;
+      font-family: $font-family-sans-serif;
+      font-size: 13px;
+      text-transform: uppercase;
+      font-weight: 500;
+      line-height: 1.2;
+      letter-spacing: 1.5px;
+      .social-row-logo {
+        width: 55px;
+        text-align: center;
+        float: left;
+        margin-right: 15px;
+        margin-top: 3px;
+      }
+      em,
+      strong {
+        font-size: 18px;
+        letter-spacing: 2px;
+      }
+      em {
+        font-family: $font-family-serif;
+        text-transform: none;
+        font-weight: normal;
+        letter-spacing: none;
+      }
+      strong {
+        text-transform: uppercase;
+        font-weight: 500;
+        display: block;
+      }
+      img {
+        height: 36px;
+      }
+    }
+    a.social-row-wrapper:hover {
+      background: #eee;
+    }
+  }
+}
+
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .social-rows {
+    li {
+      .social-row-wrapper {
+        text-align: center;
+        .social-row-logo {
+          width: auto;
+          margin: 0 0 10px;
+          float: none;
+        }
+      }
+    }
+  }
+
+}
+
+// Up to tablet
+@media (max-width: 767px) {}
+
+// Up to landscape phone
+@media (max-width: 480px) {
+
+  .social-rows {
+    li {
+      .social-row-wrapper {
+        padding: 15px;
+        .social-row-logo {
+
+        }
+      }
+    }
+  }
+
+}

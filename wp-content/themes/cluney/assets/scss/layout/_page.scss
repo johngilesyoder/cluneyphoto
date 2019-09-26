@@ -1,0 +1,83 @@
+// page.scss
+// -----------------------------------------------------------------
+
+:focus {
+  outline: 0 !important;
+}
+
+body {
+
+}
+
+main {
+  margin: 0 0 100px;
+}
+
+a {
+  text-decoration: underline;
+}
+
+.page-billboard {
+
+}
+
+.page-title {
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 5.5px;
+  text-transform: uppercase;
+  margin: 0 0 40px;
+}
+
+.page-template-template-sidebar {
+  .about-photo {
+    margin: 0 0 40px;
+  }
+}
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {
+
+  main {
+    margin: 0 0 80px;
+  }
+
+}
+
+// Up to tablet
+@media (max-width: 767px) {
+
+  main {
+    margin: 0 0 40px;
+  }
+
+  .page-title {
+    font-size: 24px;
+    letter-spacing: 4.5px;
+  }
+
+}
+
+// Up to landscape phone
+@media (max-width: 480px) {
+
+  main {
+    margin: 0 0 30px;
+  }
+
+  .page-title {
+    font-size: 21px;
+    letter-spacing: 3.5px;
+    margin: 0 0 30px;
+  }
+
+}

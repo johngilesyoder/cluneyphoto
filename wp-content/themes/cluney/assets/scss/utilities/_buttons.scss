@@ -1,0 +1,109 @@
+// buttons.scss
+// -----------------------------------------------------------------
+
+.btn-strip {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  outline: none;
+}
+
+.btn {
+  font-family: $font-family-sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 2.5px;
+  padding: 10px 30px;
+  border: 0;
+  border-radius: 0;
+}
+
+.btn-primary {
+  text-decoration: none !important;
+}
+
+.btn-secondary {
+  border: 1px solid $border-color;
+  background: #fff;
+  color: $text-color;
+  text-decoration: none;
+  &:hover {
+    background: #000;
+    color: #fff;
+    border-color: #000;
+  }
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid $link-color;
+  border-radius: 18px;
+  box-shadow: none;
+  color: $link-color;
+  padding: 4px 18px 4px 12px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: $font-family-sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  &:hover {
+    background: #fff;
+    color: $link-color;
+    text-decoration: none;
+  }
+}
+
+// .btn-primary {
+//   background-color: #6E9C5C;
+//   #gradient > .vertical(#80B068,#659457);
+//   border-color: transparent;
+//   font-size: 24px;
+//   font-weight: 700;
+//   &:hover {
+//     background: #659457;
+//     border-color: transparent;
+//   }
+//   &:active {
+//     background: #659457;
+//     border-color: transparent;
+//     &:hover {
+//       background: #659457;
+//       border-color: transparent;
+//     }
+//   }
+//   &:disabled {
+//     background-color: #6E9C5C;
+//     border-color: transparent;
+//     &:hover {
+//       background: #659457;
+//       border-color: transparent;
+//     }
+//   }
+// }
+
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {}
+
+// Up to tablet
+@media (max-width: 767px) {
+
+  .btn {
+    padding: 10px 20px;
+  }
+
+}
+
+// Up to landscape phone
+@media (max-width: 480px) {}
