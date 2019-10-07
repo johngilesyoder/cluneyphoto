@@ -1,6 +1,6 @@
 <ul class="social-rows">
   <li>
-    <a class="social-row-wrapper" href="http://www.facebook.com/cluneyphoto">
+    <a target="_blank" class="social-row-wrapper" href="http://www.facebook.com/cluneyphoto">
       <div class="social-row-logo">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-facebook-transparent.png">
       </div>
@@ -9,7 +9,7 @@
     </a>
   </li>
   <li>
-    <a class="social-row-wrapper" href="http://www.instagram.com/cluneyphoto">
+    <a target="_blank" class="social-row-wrapper" href="http://www.instagram.com/cluneyphoto">
       <div class="social-row-logo">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-instagram-transparent.png">
       </div>
