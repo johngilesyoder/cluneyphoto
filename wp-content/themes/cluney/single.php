@@ -57,8 +57,8 @@
           <?php the_content(); // Dynamic Content ?>
 
           <div class="post-pagination">
-            <?php previous_post_link('%link', '&larr; %title'); ?> 
-            <?php next_post_link('%link', '%title &rarr;'); ?> 
+            <?php previous_post_link('%link', '&larr; Previous Post'); ?> 
+            <?php next_post_link('%link', 'Next Post &rarr;'); ?> 
           </div>
 
 					<div class="post-share post-share-bottom">
