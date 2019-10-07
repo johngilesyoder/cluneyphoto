@@ -56,6 +56,11 @@
 
           <?php the_content(); // Dynamic Content ?>
 
+          <div class="post-pagination">
+            <?php previous_post_link('%link', '&larr; %title'); ?> 
+            <?php next_post_link('%link', '%title &rarr;'); ?> 
+          </div>
+
 					<div class="post-share post-share-bottom">
             <strong>Share this post</strong>
             <div class="share-facebook">

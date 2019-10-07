@@ -418,3 +418,15 @@ if( function_exists('acf_add_options_page') ) {
   acf_add_options_page();
 
 }
+
+function posts_link_next_class($format){
+  $format = str_replace('href=', 'class="next btn btn-secondary" href=', $format);
+  return $format;
+}
+add_filter('next_post_link', 'posts_link_next_class');
+
+function posts_link_prev_class($format) {
+  $format = str_replace('href=', 'class="prev btn btn-secondary" href=', $format);
+  return $format;
+}
+add_filter('previous_post_link', 'posts_link_prev_class');
