@@ -23,33 +23,38 @@
 			<main role="main">
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-					<?php the_content(); // Dynamic Content ?>
+          <?php if( have_rows('gallery_images') ): ?>
 
-					<div class="grid">
-						<div class="gutter-sizer"></div>
-						<!-- Loop these images from ACF -->
+            <div class="grid">
+              <div class="gutter-sizer"></div>
+              <!-- Loop these images from ACF -->
 
-						<?php if( have_rows('gallery_images') ): ?>
+              <?php while( have_rows('gallery_images') ): the_row();
 
-							<?php while( have_rows('gallery_images') ): the_row();
+                // vars
+                $image = get_sub_field('gallery_image');
+                $diptych = get_sub_field('vertical');
 
-								// vars
-								$image = get_sub_field('gallery_image');
-								$diptych = get_sub_field('vertical');
+                ?>
 
-								?>
+                <?php if( $link ): ?>
+                  <a href="<?php echo $link; ?>">
+                <?php endif; ?>
 
-									<?php if( $link ): ?>
-										<a href="<?php echo $link; ?>">
-									<?php endif; ?>
+                <img class="grid-item<?php if( $diptych ): ?> diptych<?php endif; ?>" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" title="<?php echo $image['title'] ?>" />
+              
+                <?php if( $link ): ?>
+                  </a>
+                <?php endif; ?>
 
-									<img class="grid-item<?php if( $diptych ): ?> diptych<?php endif; ?>" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" title="<?php echo $image['title'] ?>" />
+              <?php endwhile; ?>
+          
+            </div>
 
-							<?php endwhile; ?>
+          <?php endif; ?>
 
-						<?php endif; ?>
 
-					</div>
+          <?php the_content(); // Dynamic Content ?>
 
 					<div class="post-share post-share-bottom">
             <strong>Share this post</strong>
