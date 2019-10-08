@@ -6,8 +6,6 @@
 		</h2>
 		<span class="date"><?php the_time('F j, Y'); ?></span>
 
-		<?php the_content();?>
-
 		<div class="grid">
 			<div class="gutter-sizer"></div>
 			<!-- Loop these images from ACF -->
@@ -31,13 +29,19 @@
 							<a href="<?php echo $link; ?>">
 						<?php endif; ?>
 
-						<img class="grid-item<?php if( $diptych ): ?> diptych<?php endif; ?>" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+						  <img class="grid-item<?php if( $diptych ): ?> diptych<?php endif; ?>" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+            
+            <?php if( $link ): ?>
+							</a>
+						<?php endif; ?>
 
 				<?php endwhile; ?>
 
 			<?php endif; ?>
 
 		</div>
+
+    <?php the_content();?>
 
 		<?php if( have_rows('gallery_images') ): ?>
 			<div class="btn-excerpt-wrapper">
