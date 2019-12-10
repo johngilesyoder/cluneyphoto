@@ -438,7 +438,7 @@ function remove_medium_image_size() {
 }
 add_action('init', 'remove_medium_image_size');
 
-function remove_medium_image_size() {
+function remove_large_image_size() {
   remove_image_size( 'large' );
 }
-add_action('init', 'remove_medium_image_size');
+add_action('init', 'remove_large_image_size');
