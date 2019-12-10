@@ -10,9 +10,9 @@ if (function_exists('add_theme_support')) {
 
   // Add Thumbnail Theme Support
   add_theme_support('post-thumbnails');
-  add_image_size('large', 700, '', true); // Large Thumbnail
-  add_image_size('medium', 250, '', true); // Medium Thumbnail
-  add_image_size('blogroll', 960, '', true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
+  // add_image_size('large', 700, '', true); // Large Thumbnail
+  // add_image_size('medium', 250, '', true); // Medium Thumbnail
+  // add_image_size('blogroll', 960, '', true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
 
   // Enables post and comment RSS feed links to head
   add_theme_support('automatic-feed-links');
