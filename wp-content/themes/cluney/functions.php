@@ -433,15 +433,28 @@ add_filter('previous_post_link', 'posts_link_prev_class');
 
 
 // Remove image sizes
-add_filter( 'intermediate_image_sizes_advanced', 'prefix_remove_default_images' );
-// Remove default image sizes here. 
-function prefix_remove_default_images( $sizes ) {
- unset( $sizes['small']); // 150px
- unset( $sizes['medium']); // 300px
- unset( $sizes['large']); // 1024px
- unset( $sizes['medium_large']); // 768px
- return $sizes;
+function wcr_remove_intermediate_image_sizes($sizes, $metadata) {
+  $disabled_sizes = array(
+      'thumbnail', // 150x150 image
+      'medium', // max 300x300 image
+      'large'   // max 1024x1024 image
+  );
+
+  // unset disabled sizes
+  foreach ($disabled_sizes as $size) {
+      if (!isset($sizes[$size])) {
+          continue;
+      }
+  
+      unset($sizes[$size]);
+  }
+
+  return $sizes;
 }
+
+add_filter('intermediate_image_sizes_advanced', 'wcr_remove_intermediate_image_sizes', 10, 2);
+
+// print_r( get_intermediate_image_sizes() );
 
 // Disable WordPRess responsive srcset images
 add_filter('max_srcset_image_width', create_function('', 'return 1;'));
