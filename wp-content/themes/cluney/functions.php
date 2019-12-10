@@ -442,3 +442,6 @@ function prefix_remove_default_images( $sizes ) {
  unset( $sizes['medium_large']); // 768px
  return $sizes;
 }
+
+// Disable WordPRess responsive srcset images
+add_filter('max_srcset_image_width', create_function('', 'return 1;'));
