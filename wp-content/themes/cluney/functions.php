@@ -430,3 +430,15 @@ function posts_link_prev_class($format) {
   return $format;
 }
 add_filter('previous_post_link', 'posts_link_prev_class');
+
+
+// Remove image sizes
+function remove_medium_image_size() {
+  remove_image_size( 'medium' );
+}
+add_action('init', 'remove_medium_image_size');
+
+function remove_medium_image_size() {
+  remove_image_size( 'large' );
+}
+add_action('init', 'remove_medium_image_size');
