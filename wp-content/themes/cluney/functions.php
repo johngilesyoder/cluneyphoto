@@ -433,12 +433,12 @@ add_filter('previous_post_link', 'posts_link_prev_class');
 
 
 // Remove image sizes
-function remove_medium_image_size() {
-  remove_image_size( 'medium' );
+add_filter( 'intermediate_image_sizes_advanced', 'prefix_remove_default_images' );
+// Remove default image sizes here. 
+function prefix_remove_default_images( $sizes ) {
+ unset( $sizes['small']); // 150px
+ unset( $sizes['medium']); // 300px
+ unset( $sizes['large']); // 1024px
+ unset( $sizes['medium_large']); // 768px
+ return $sizes;
 }
-add_action('init', 'remove_medium_image_size');
-
-function remove_large_image_size() {
-  remove_image_size( 'large' );
-}
-add_action('init', 'remove_large_image_size');
