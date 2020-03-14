@@ -2,6 +2,10 @@
 
   <main role="main">
 
+    <section class="home-portfolio-callout">
+      <a href="/portfolio/">View Portfolio &rarr;</a>
+    </section>
+
     <!-- Hero -->
     <!-- =================================== -->
     <section class="home-hero">
