@@ -8,7 +8,11 @@
     </a>
   </div>
 
-  <?php query_posts( 'posts_per_page=1' ); ?>
+  <?php query_posts( array( 
+    'post__not_in' => get_option( 'sticky_posts' ),
+    'posts_per_page' => 1,
+    )
+  ); ?>
 
   <?php if (have_posts()): while (have_posts()) : the_post(); ?>
     <a href="<?php the_permalink(); ?>" class="block-blog">
