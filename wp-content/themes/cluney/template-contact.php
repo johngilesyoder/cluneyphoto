@@ -12,8 +12,9 @@
 						<h4>CLUNEY PHOTO</h4>
 						<span class="contact-name">Mark Cluney</span>
 						<address>
-              1210 Loomis Ave<br>
-							Des Moines, IA 50315
+              3333 Grand Ave.<br>
+              Ste. #115<br>
+              Des Moines, IA 50312
 						</address>
 						<a class="email-address" href="mailto:mark@cluneyphoto.com">mark@cluneyphoto.com</a>
 						<a class="phone-number" href="tel:14065403199">(406) 540-3199</a>
